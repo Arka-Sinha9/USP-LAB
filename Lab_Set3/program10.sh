@@ -4,16 +4,7 @@ do
 	do
 		for k in 1 2 3
 		do
-			if [ $i -ne $j ]
-			then
-				if [ $j -ne $k ]
-				then
-					if [ $k -ne $i ]
-					then
-						echo $i $j $k
-					fi
-				fi
-			fi
+			echo $i $j $k
 		done
 	done
 done 
