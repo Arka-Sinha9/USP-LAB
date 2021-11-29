@@ -9,7 +9,8 @@ do
 	read see
 	cie=$((cie/2))
 	see=$((see/2))
-	tot=`expr $cie + $see`
+	tot=$((cie + see))
+	echo $tot
 	case $tot in 
 	100) echo "The grade for $sub is S grade";;
 	9[0-9]) echo "The grade for $sub is S grade";;
@@ -18,7 +19,7 @@ do
 	6[0-9]) echo "The grade for $sub is C grade";;
 	5[0-9]) echo "The grade for $sub is D grade";;
 	4[0-9]) echo "The grade for $sub is E grade";;
-	[0-3]_) echo "FAIL in $sub"
+	[0-3][0-9]) echo "FAIL in $sub"
 	pass=$((pass-1));;
 	*) echo "Enter a valid marks: "
 	esac
