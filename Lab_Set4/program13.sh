@@ -12,14 +12,15 @@ do
 	tot=`expr $cie + $see`
 	case $tot in 
 	100) echo "The grade for $sub is S grade";;
-	9*) echo "The grade for $sub is S grade";;
-	8*) echo "The grade for $sub is A grade";;
-	7*) echo "The grade for $sub is B grade";;
-	6*) echo "The grade for $sub is C grade";;
-	5*) echo "The grade for $sub is D grade";;
-	4*) echo "The grade for $sub is E grade";;
-	*) echo "FAIL in $sub"
+	9[0-9]) echo "The grade for $sub is S grade";;
+	8[0-9]) echo "The grade for $sub is A grade";;
+	7[0-9]) echo "The grade for $sub is B grade";;
+	6[0-9]) echo "The grade for $sub is C grade";;
+	5[0-9]) echo "The grade for $sub is D grade";;
+	4[0-9]) echo "The grade for $sub is E grade";;
+	[0-3]_) echo "FAIL in $sub"
 	pass=$((pass-1));;
+	*) echo "Enter a valid marks: "
 	esac
 done
 echo "Total passes is $pass"
